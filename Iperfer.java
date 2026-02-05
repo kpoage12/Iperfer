@@ -25,11 +25,13 @@ public class Iperfer {
 
                     long startTime = System.currentTimeMillis();
                     long endTime = startTime + timeMillis;
-
+                    int count = 0;
                     while (System.currentTimeMillis() < endTime){
-                        out.write(1);
+                        count += 1;
+                        out.write('1');
+                        out.flush();
                     }
-
+                    System.out.println(count);
                 }
                 catch (Exception e){
                     System.out.println("Can't connect");
@@ -54,10 +56,15 @@ public class Iperfer {
                 
                 try{
                     ServerSocket serverSocket = new ServerSocket(portNumber);
-
+                    int input;
                     Socket socket = serverSocket.accept();
-                    System.out.println("Client accepted");
+                    BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                    int count = 0;
+                    while ((input = in.read()) != -1){
+                        count += 1;
+                    }
 
+                    System.out.println(count);
                 }
                 catch(IOException e)
                 {
