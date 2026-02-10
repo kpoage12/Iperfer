@@ -1,0 +1,14 @@
+Q2:
+prediction: latency: 162 ms, throughput: 21 Mbps
+actual: latency: 160.376 ms, throughput: 20.293 Mbps
+Explanation: the RTT is going to be the sum of RTT's of L1, L2, and L3 which is around 162 ms which was close to the actual. The throughput will be the minimum of L1, L2, and L3's throughput's as thats the bottleneck which is L1's throughput which is around 21 Mbps
+
+Q3:
+prediction: 2 pairs: latency: 320 ms, throughput: 10 Mbps, 3 pairs: latency: 480 ms, throughput: 7 Mbps
+actual: 2 pairs: avg latency 161.9578 ms, avg throughput: 11.172 Mbps, 3 pairs: latency: 161.339 ms, throughput: 8.05 Mbps
+Explanation: Latency remained nearly identical to 1 pair communicating. This is because the size of the packest used in ping are relatively small, meaning there was little to no queueing delay as the link wasnt close to being full. This was different from our prediction as I thought roundtrip time may be increased by a factor of how many pairs of hosts are communicating over the link. Throughput decreased in proportion to the number of paurs on the link. This is because the pairs share the same bottleneck in the link and they must divide teh links capacity.
+
+Q4
+prediction: h1-h4: latency: 160 ms, throughput: 20 Mbps, h5-h6: latency: 41 ms, throughput: 20 Mbps
+actual: h1-h4: latency: 161.208 ms, throughput: 18.207 Mbps, h5-h6: latency: 40.808 ms, throughput: 22.661 Mbps
+Explanation: RTT should remain similar to the sum of the RTT's over the links to get from h1 to h4 and from h5 to h6 as the packet sizes are very small so congestion will be trivial. Throughput for each path will be the minimum throughput on a link in the path. L2's throughput will be divided by around 2 since the paths are sharing it making its throughput around 20 Mbps. Thus for h5-h6 the minimum throughput is around 20 Mbps and for h1-h4 its also around 20 Mbps (L1 also has a throughput of around 20 Mbps, so h1-h4's throughput won't change much do to h5 and h6 communicating).
