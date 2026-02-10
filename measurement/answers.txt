@@ -1,9 +1,9 @@
 Q1:
-L1:rtt min/avg/max/mdev = 80.148/80.688/87.221/1.576 ms
-L2:rtt min/avg/max/mdev = 20.149/20.775/27.847/1.649 ms
-L3:rtt min/avg/max/mdev = 60.141/60.859/69.796/2.186 ms
-L4:rtt min/avg/max/mdev = 10.111/10.475/16.155/1.311 ms
-L5:rtt min/avg/max/mdev = 10.104/10.256/11.569/0.329 ms
+L1:rtt min/avg/max/mdev = 80.148/80.688/87.221/1.576 ms sent=56012 KB rate=20.827 Mbps
+L2:rtt min/avg/max/mdev = 20.149/20.775/27.847/1.649 ms sent=106147 KB rate=39.228 Mbps
+L3:rtt min/avg/max/mdev = 60.141/60.859/69.796/2.186 ms sent=80282 KB rate=31.623 Mbps
+L4:rtt min/avg/max/mdev = 10.111/10.475/16.155/1.311 ms sent=63763 KB rate=25.198 Mbps
+L5:rtt min/avg/max/mdev = 10.104/10.256/11.569/0.329 ms sent=69899 KB rate=26.869 Mbps
 
 Q2:
 prediction: latency: 162 ms, throughput: 21 Mbps
