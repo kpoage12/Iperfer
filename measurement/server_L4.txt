@@ -1,1 +1,0 @@
-received=63763 KB rate=22.107 Mbps
