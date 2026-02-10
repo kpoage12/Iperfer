@@ -1,3 +1,10 @@
+Q1:
+L1:rtt min/avg/max/mdev = 80.148/80.688/87.221/1.576 ms
+L2:rtt min/avg/max/mdev = 20.149/20.775/27.847/1.649 ms
+L3:rtt min/avg/max/mdev = 60.141/60.859/69.796/2.186 ms
+L4:rtt min/avg/max/mdev = 10.111/10.475/16.155/1.311 ms
+L5:rtt min/avg/max/mdev = 10.104/10.256/11.569/0.329 ms
+
 Q2:
 prediction: latency: 162 ms, throughput: 21 Mbps
 actual: latency: 160.376 ms, throughput: 20.293 Mbps
@@ -6,7 +13,7 @@ Explanation: the RTT is going to be the sum of RTT's of L1, L2, and L3 which is 
 Q3:
 prediction: 2 pairs: latency: 320 ms, throughput: 10 Mbps, 3 pairs: latency: 480 ms, throughput: 7 Mbps
 actual: 2 pairs: avg latency 161.9578 ms, avg throughput: 11.172 Mbps, 3 pairs: latency: 161.339 ms, throughput: 8.05 Mbps
-Explanation: Latency remained nearly identical to 1 pair communicating. This is because the size of the packest used in ping are relatively small, meaning there was little to no queueing delay as the link wasnt close to being full. This was different from our prediction as I thought roundtrip time may be increased by a factor of how many pairs of hosts are communicating over the link. Throughput decreased in proportion to the number of paurs on the link. This is because the pairs share the same bottleneck in the link and they must divide teh links capacity.
+Explanation: Latency remained nearly identical to 1 pair communicating. This is because the size of the packest used in ping are relatively small, meaning there was little to no queueing delay as the link wasnt close to being full. This was different from our prediction as I thought roundtrip time may be increased by a factor of how many pairs of hosts are communicating over the link. Throughput decreased in proportion to the number of paurs on the link. This is because the pairs share the same bottleneck in the link and they must divide the links capacity.
 
 Q4
 prediction: h1-h4: latency: 160 ms, throughput: 20 Mbps, h5-h6: latency: 41 ms, throughput: 20 Mbps
